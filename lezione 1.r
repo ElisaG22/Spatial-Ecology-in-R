@@ -30,3 +30,44 @@ plot(matteo,elisa)
 
 #changing the point character
 plot(matteo,elisa,pch=19)
+
+#character exageration
+plot(matteo, elisa, pch=19, cex=4)
+plot(matteo, elisa, pch=19, cex=0.5) #to divide
+
+#changing the colors (search table of colors in Google)
+plot(matteo, elisa, pch=19, cex=2, col="blue")
+plot(matteo, elisa, pch=19, cex=2, col="pink")
+
+#changing lables
+plot(matteo, elisa, pch=19, cex=2, col="pink", xlab="number of mammals", ylab="number of human deaths")
+
+# create the two arrays
+matteo <- c(5, 10, 20, 50, 80)
+elisa <- c(100, 80, 50, 20, 10)
+
+# combine them into a matrix
+my_matrix <- rbind(matteo, elisa)
+
+# create a heatmap
+heatmap(my_matrix)
+
+plot(matteo, elisa,
+     pch=19,
+     cex=1.3,
+     col="hotpink",
+     xlab="Number of mammals",
+     ylab="Number of human deaths",
+     main="Mammal abundance and human deaths")
+
+# add a trend line
+model <- lm(elisa ~ matteo)
+
+abline(model,
+       col="blue",
+       lwd=3)
+
+#point character changes the points inside the plt
+
+#changing the point character
+plot(matteo,elisa,pch=19)
